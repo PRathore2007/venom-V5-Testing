@@ -14,7 +14,7 @@ from requests.exceptions import ReadTimeout, ConnectionError
 # Load configuration
 CONFIG_FILE = 'config.json'
 ORIGINAL_BGMI_PATH = '/workspaces/venom-V5-Testing/bgmi'      #ADD YOUR FILES PATH HERE 
-ORIGINAL_SAHIL_PATH = '/workspaces/rvenom-V5-Testing/bgmi2'    #ADD YOUR FILES PATH HERE 
+ORIGINAL_SAHIL_PATH = '/workspaces/venom-V5-Testing/bgmi2'    #ADD YOUR FILES PATH HERE 
 
 def update_proxy():    #AUTOMATICALLY CHANGES YOUR IP AND SAVES YOU FROM SUSPEND OF GITHUB ACCOUNT AND ALSO CHANGES YOUR IP EVERY SECOND
     proxy_list = [
@@ -292,7 +292,7 @@ def handle_attack_details(message):
             duration = int(duration)
 
             # Restrict attack duration for normal users
-            MAX_DURATION = 240  # Set maximum duration (in seconds) for Normal users
+            MAX_DURATION = 1800  # Set maximum duration (in seconds) for Normal users
             if user_id not in ADMIN_IDS and duration > MAX_DURATION:
                 bot.send_message(message.chat.id, f"❗️𝗘𝗿𝗿𝗼𝗿: 𝗠𝗮𝘅𝗶𝗺𝘂𝗺 𝗨𝘀𝗮𝗴𝗲 𝗧𝗶𝗺𝗲 𝗶𝘀 {MAX_DURATION} 𝗦𝗲𝗰𝗼𝗻𝗱𝘀❗️")
                 return
